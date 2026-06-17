@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aviary Index</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Aviary.css">
+</head>
+
+<body>
+
+<div class="container" id="loginContainer">
+
+  <img src="AviaryLogo.png" class="logo_login">
+
+  <h1>Aviary Index</h1>
+  
+  <div class="section">
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="loginUser()">Login</button>
+    <button onclick="signupUser()">Sign Up</button>
+  </div>
+
+  <p id="authMessage"></p>
+
+</div>  
+
+<div class="container main_container" id="appContainer" style="display:none;">
+
+  <img src="/AviaryLogo.png" class="logo_main">
+
+  <h1>Aviary Index</h1>  
+
+   <div class="main-layout">
+
+    <div class="sidebar">
+
+      <h2>Search</h2>
+
+      <input type="text" id="keywordSearch" placeholder="Search..." />
+
+      <div class="filter-row">
+
+        <div class="filter-group">
+          <h4>Region</h4>
+          <label><input type="checkbox" value="North_East" class="region-filter"> North East</label>
+          <label><input type="checkbox" value="South" class="region-filter"> South</label>
+
+          <label><input type="checkbox" value="Mid_West" class="region-filter"> Mid West</label>
+          <label><input type="checkbox" value="West" class="region-filter"> West</label>
+
+          <label><input type="checkbox" value="All_Birds" class="region-filter"> All Birds</label>
+        </div>
+  
+        <div class="filter-group">
+          <h4>Color</h4>
+  
+          <div class="color-grid">
+            <label><input type="checkbox" value="red" class="color-filter"> Red</label>
+            <label><input type="checkbox" value="blue" class="color-filter"> Blue</label>
+            <label><input type="checkbox" value="brown" class="color-filter"> Brown</label>
+            <label><input type="checkbox" value="black" class="color-filter"> Black</label>
+
+            <label><input type="checkbox" value="yellow" class="color-filter"> Yellow</label>
+            <label><input type="checkbox" value="green" class="color-filter"> Green</label>
+            <label><input type="checkbox" value="white" class="color-filter"> White</label>
+            <label><input type="checkbox" value="gray" class="color-filter"> Gray</label>
+            
+            <label><input type="checkbox" value="pink" class="color-filter"> Pink</label>
+            <label><input type="checkbox" value="orange" class="color-filter"> Orange</label>
+            <label><input type="checkbox" value="tan" class="color-filter"> Tan</label>
+          </div>
+  
+        </div>
+  
+      </div>
+  
+      <button onclick="searchBirds()">Apply Filters</button>
+  
+    </div>
+
+  <div class="section">
+    <h2>Results</h2>
+    <table>
+      <div id="resultsGrid" class="grid"></div>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Register Bird</h2>
+    <input type="text" id="birdName" placeholder="Name">
+    <input type="text" id="birdSize" placeholder="Size (cm)">
+    <input type="text" id="birdColor" placeholder="Color">
+    <input type="text" id="birdEggSize" placeholder="Egg Size (cm)">
+    <input type="text" id="birdEggColor" placeholder="Egg Color">
+    <input type="text" id="birdMigrationPatterns" placeholder="Migration Pattern">
+    <br><br>
+    <select id="registerRegion">
+      <option value="North_East">North East</option>
+      <option value="South">South</option>
+      <option value="Mid_West">Mid West</option>
+      <option value="West">West</option>
+    </select>
+    <br><br>
+    <button onclick="addBird()">Add Bird</button>
+  </div>
+</div>
+
+<script src="Aviary.js"></script>
+
+</body>
+</html>

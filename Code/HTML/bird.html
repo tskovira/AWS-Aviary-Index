@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bird Details</title>
+  <link rel="stylesheet" href="Aviary.css">
+  <script src="bird.js"></script>
+</head>
+<body>
+
+  <header class="detail-header">
+    <button onclick="goBack()">← Back</button>
+    <h1 id="birdName">Loading...</h1>
+    <p id="birdSubtitle"></p>
+  </header>
+
+  <main>
+
+    <div class="hero">
+      <img id="birdImage" class="hero-img">
+      <div class="hero-overlay">
+        <h1 id="birdName"></h1>
+        <p id="birdSubtitle"></p>
+      </div>
+    </div>
+  
+    <section class="info-section">
+  
+      <div class="info-card">
+        <h3>Size</h3>
+        <p id="birdSize"></p>
+      </div>
+  
+      <div class="info-card">
+        <h3>Color</h3>
+        <p id="birdColor"></p>
+      </div>
+  
+      <div class="info-card">
+        <h3>Egg Size</h3>
+        <p id="birdEggSize"></p>
+      </div>
+  
+      <div class="info-card">
+        <h3>Egg Color</h3>
+        <p id="birdEggColor"></p>
+      </div>
+  
+      <div class="info-card">
+        <h3>Migration</h3>
+        <p id="birdMigration"></p>
+      </div>
+
+      <div class="info-card">
+        <h3>Species Status</h3>
+        <p id="birdSpeciesStatus"></p>
+      </div>
+  
+    </section>
+  
+    <section class="migration-section">
+      <h2>Migration Pattern</h2>
+      <img id="migrationImage" class="migration-feature">
+    </section>
+  
+  </main>
+  
+  <section class="description-section">
+    <h2>About</h2>
+    <p id="birdDescription"></p>
+  </section>
+
+  <script src="js/bird.js"></script>
+</body>
+</html>
